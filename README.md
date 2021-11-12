@@ -2,7 +2,7 @@
 
 The smallest possible Docker image contains a Hello World application that avoids libc so has 0 dependencies and uses less than 9kB.
 
-> Take a look at https://github.com/raminfp/linux_syscall/blob/master/C_syscall_without_standard_library_linux/assm_syscall.c for a Hello World without libc.
+> Take a look at [linux syscall](https://github.com/raminfp/linux_syscall/blob/master/C_syscall_without_standard_library_linux/assm_syscall.c) for a Hello World without libc.
 
 You can create the image with `docker build -t minimal .`
 
