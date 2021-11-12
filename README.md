@@ -22,11 +22,11 @@ With the last image, there's only the sh and hello executables. But you can stil
 * `echo *` to list the files in the current directory
 * `pwd` to show the current directory
 * You can create a cat command with this shell function:
-`sh
-cat() {
- while read line;
- do echo $line;
- done < $1
- }
-`
+    ```sh
+    cat() {
+    while read line;
+        do echo $line
+    done < $1
+    }
+    ```
 * Now you can do `cat /proc/version` to see the kernel version
