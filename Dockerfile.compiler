@@ -1,9 +1,12 @@
+# Compiler container
+
 FROM gcc AS compiler
 WORKDIR /source
 COPY /source/*.c /source/*.S .
 RUN gcc -s -O2 -nostdlib stubstart.S -o hello hello.c
 RUN chmod +x hello
 
+# Actual container
 FROM scratch
 
 COPY --from=compiler /source/hello /usr/bin/
