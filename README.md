@@ -29,4 +29,4 @@ With the last image, there's only the sh and hello executables. But you can stil
     done < $1
     }
     ```
-* Now you can do `cat /proc/version` to see the kernel version
+* Now you can do `cat /proc/version` to see the kernel version or `cat /proc/sys/kernel/hostname` to see the hostname.
