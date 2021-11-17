@@ -2,8 +2,9 @@
 
 FROM gcc AS compiler
 WORKDIR /source
-COPY /source/*.c /source/*.S .
-RUN gcc -s -O2 -nostdlib stubstart.S -o hello hello.c
+COPY /source/*.c /source/*.S ./
+RUN gcc -v
+RUN gcc --static -s -O2 -nostdlib stubstart.S -o hello hello.c
 RUN chmod +x hello
 
 # Actual container
